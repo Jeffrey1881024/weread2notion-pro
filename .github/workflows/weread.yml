@@ -55,5 +55,6 @@ jobs:
             echo "No changes to commit."
           else
             git commit -m 'Sync changes between Notion and WeRead'
-            git push || echo "Failed to push changes."
+            git pull origin main
+            git push origin main || echo "Failed to push changes."
           fi
